@@ -1,5 +1,5 @@
 const input = document.getElementById('pass');
-const passwords = ["user", "spring", "John"];
+const passwords = ["user", "sPring", "John"];
 const messages = ["I've prepared sandwitches for you", "Spring is the best time of the year", "John has got a nice car"]
 const div = document.querySelector('div');
 
@@ -8,7 +8,7 @@ input.addEventListener('input', (e) => {
     div.textContent = "";
 
 passwords.forEach((password, index) => {
-if (password === text) {
+if (password.toLocaleLowerCase() === text.toLocaleLowerCase()) {
     div.textContent = messages[index]
 }
 })
